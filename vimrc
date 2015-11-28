@@ -17,9 +17,11 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'powerline/powerline'
 Plugin 'vim-scripts/Conque-Shell'
+Plugin 'bling/vim-airline'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -37,6 +39,7 @@ Plugin 'git://git.wincent.com/command-t.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -69,6 +72,8 @@ set autoindent
 set smartindent
 set cindent
 set mouse=a
+set foldmethod=indent
+set foldlevelstart=20
 
 let mapleader = ","
 
