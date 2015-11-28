@@ -54,7 +54,6 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "
 " Bundle "myusuf3/numbers.vim"
-Bundle "Syntastic"
 " Bundle "klen/python-mode"
 " Bundle "pythoncomplete"
 Bundle "tpope/vim-markdown"
