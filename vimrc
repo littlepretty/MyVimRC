@@ -22,6 +22,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'powerline/powerline'
 Plugin 'vim-scripts/Conque-Shell'
 Plugin 'bling/vim-airline'
+Plugin 'airblade/vim-gitgutter'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
