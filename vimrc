@@ -83,10 +83,27 @@ nmap <leader>e :NERDTreeFind<CR>
 
 filetype plugin on
 
+" Tell vim to remember certain things when exit
+set viminfo='10,\"100,:50,%,n~/.viminfo
+
 if has("autocmd")
-        au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") 
+        au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                 \| exe "normal! g'\"" | endif
 endif
+
+"function! ResCur()
+        "if line("'\"") <= line($)
+                "normal! g`"
+                "return 1
+        "endif
+"endfunction
+
+"augroup resCur
+        "autocmd!
+        "autocmd BufWinEnter * call ResCur()
+"augroup END
+
+colorscheme darkblue
 
 if has('clipboard')
         if has ('unnamedplus')
