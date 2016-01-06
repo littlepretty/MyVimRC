@@ -23,6 +23,7 @@ Plugin 'powerline/powerline'
 Plugin 'vim-scripts/Conque-Shell'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'flazz/vim-colorschemes'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -61,9 +62,11 @@ Bundle "tpope/vim-markdown"
 Bundle "spf13/vim-preview"
 Bundle "kien/ctrlp.vim"
 
-
+" Show line numbers
 set number
+" Highlight search
 set hlsearch
+" Set tab width
 set tabstop=8
 set expandtab
 set shiftwidth=8
@@ -71,9 +74,19 @@ set softtabstop=8
 set autoindent
 set smartindent
 set cindent
+" Enable mouse mode
 set mouse=a
+" Fold/unfold code with z+c/z+o
 set foldmethod=indent
 set foldlevelstart=20
+
+" Set spell check for tex, md and txt files
+" Set spell spelllang=en_us
+autocmd FileType tex setlocal spell
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.txt setlocal spell
+" Word completion with ctrl-N or ctrl-P
+set complete+=kspell
 
 let mapleader = ","
 
@@ -86,6 +99,7 @@ filetype plugin on
 " Tell vim to remember certain things when exit
 set viminfo='10,\"100,:50,%,n~/.viminfo
 
+" Resume to the last editing position
 if has("autocmd")
         au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                 \| exe "normal! g'\"" | endif
@@ -103,8 +117,7 @@ endif
         "autocmd BufWinEnter * call ResCur()
 "augroup END
 
-colorscheme darkblue
-
+" Copy from outside vim
 if has('clipboard')
         if has ('unnamedplus')
                 set clipboard=unnamed,unnamedplus "when possible use + register for copy-paste
