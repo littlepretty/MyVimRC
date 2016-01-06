@@ -23,6 +23,7 @@ Plugin 'powerline/powerline'
 Plugin 'vim-scripts/Conque-Shell'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'flazz/vim-colorschemes'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -103,7 +104,7 @@ endif
         "autocmd BufWinEnter * call ResCur()
 "augroup END
 
-colorscheme darkblue
+colorscheme default
 
 if has('clipboard')
         if has ('unnamedplus')
