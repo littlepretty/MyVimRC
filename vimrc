@@ -13,17 +13,30 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+" git wrapper for vim
 Plugin 'tpope/vim-fugitive'
+" function/variable summary
 Plugin 'majutsushi/tagbar'
+" file tree viewer
 Plugin 'scrooloose/nerdtree'
+" comment multiple lines
 Plugin 'scrooloose/nerdcommenter'
+" syntax checker
 Plugin 'scrooloose/syntastic'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'powerline/powerline'
+" open buffer and execute shell
 Plugin 'vim-scripts/Conque-Shell'
+" status/tabline
 Plugin 'bling/vim-airline'
+" git indicator
 Plugin 'airblade/vim-gitgutter'
+" various color schemes
 Plugin 'flazz/vim-colorschemes'
+" grammar checker, must install LanguageTool first
+Plugin 'vim-scripts/LanguageTool'
+" execute buffer
+Plugin 'fboender/bexec'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -125,4 +138,15 @@ if has('clipboard')
                 set clipboard=unnamed "on Mac and Windows, use * register for copy-paste
         endif
 endif
+
+" recommended settings for syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list=0
+let g:syntastic_auto_loc_list=0
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=1 
+
 
