@@ -37,6 +37,16 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-scripts/LanguageTool'
 " execute buffer
 Plugin 'fboender/bexec'
+" call tree/call graph, require cscope and ccglue
+" FIXME: install and config ccglue
+Plugin 'hari-rangarajan/CCTree'
+" tag and browse
+Plugin 'vim-scripts/taglist.vim'
+" syntax highlight, match, map for Markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+" finder
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -71,9 +81,6 @@ filetype plugin indent on    " required
 " Bundle "myusuf3/numbers.vim"
 " Bundle "klen/python-mode"
 " Bundle "pythoncomplete"
-Bundle "tpope/vim-markdown"
-Bundle "spf13/vim-preview"
-Bundle "kien/ctrlp.vim"
 
 
 " Set spell check for tex, md and txt files
@@ -86,7 +93,9 @@ set complete+=kspell
 
 let mapleader = ","
 
+" Tagbar toggle key
 nmap <F8> :TagbarToggle<CR>
+" NERDTree bar toggle key
 nmap <C-e> <plug>NERDTreeTabsToggle<CR>
 nmap <leader>e :NERDTreeFind<CR>
 
