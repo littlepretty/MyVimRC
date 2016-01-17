@@ -150,6 +150,6 @@ let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=1 
 
 " let syntastic use c++11 std
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+let g:syntastic_cpp_compiler_options=' -std=c++11 '
 
 
