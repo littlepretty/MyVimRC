@@ -75,23 +75,6 @@ Bundle "tpope/vim-markdown"
 Bundle "spf13/vim-preview"
 Bundle "kien/ctrlp.vim"
 
-" Show line numbers
-set number
-" Highlight search
-set hlsearch
-" Set tab width
-set tabstop=8
-set expandtab
-set shiftwidth=8
-set softtabstop=8
-set autoindent
-set smartindent
-set cindent
-" Enable mouse mode
-set mouse=a
-" Fold/unfold code with z+c/z+o
-set foldmethod=indent
-set foldlevelstart=20
 
 " Set spell check for tex, md and txt files
 " Set spell spelllang=en_us
@@ -139,10 +122,6 @@ if has('clipboard')
         endif
 endif
 
-" recommended settings for syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 
 " for MacBookPro: syntax is not on
 syntax on
@@ -160,4 +139,57 @@ let g:syntastic_cpp_compiler_options=' -std=c++11 '
 " or the place where insert mode started 
 set backspace=indent,eol,start
 
+" Vim UI
+set showmode
+set cursorline
+highlight clear SignColumn
+highlight clear LineNr
+
+if has('cmdline_info')
+        set ruler
+        set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " A ruler on steroids
+        set showcmd
+endif
+
+if has('statusline')
+        set laststatus=2
+        set statusline=%<%f\
+        set statusline+=%w%h%m%r
+        " Git Hotness
+        set statusline+=%{fugitive#statusline()}
+        " Filetype
+        set statusline+=\ [%{&ff}/%Y]
+        " Current dir
+        set statusline+=\ [%{getcwd()}]
+        " Right aligned file nav info
+        "set statusline+=%=%-14.(%l,%c%V)\ %p%%
+        " recommended settings for syntastic
+        set statusline+=%#warningmsg#
+        set statusline+=%{SyntasticStatuslineFlag()}
+        set statusline+=%*
+endif
+
+" Show line numbers
+set number
+" Highlight search
+set hlsearch
+" Show matching brackets/parenthesis
+set showmatch
+set incsearch
+" Case insensitive search
+set ignorecase
+set smartcase
+" Set tab width
+set tabstop=8
+set expandtab
+set shiftwidth=8
+set softtabstop=8
+set autoindent
+set smartindent
+set cindent
+" Enable mouse mode
+set mouse=a
+" Fold/unfold code with z+c/z+o
+set foldmethod=indent
+set foldlevelstart=20
 
