@@ -144,6 +144,8 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" for MacBookPro: syntax is not on
+syntax on
 let g:syntastic_always_populate_loc_list=0
 let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_open=1
@@ -151,5 +153,11 @@ let g:syntastic_check_on_wq=1
 
 " let syntastic use c++11 std
 let g:syntastic_cpp_compiler_options=' -std=c++11 '
+
+" for MacBookPro: backspace
+" won't delete over line breaks, 
+" or automatically-inserted indentation, 
+" or the place where insert mode started 
+set backspace=indent,eol,start
 
 
