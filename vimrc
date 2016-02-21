@@ -54,7 +54,10 @@
         Plugin 'ctrlpvim/ctrlp.vim'
         " undo brances in Vim 7.0
         Plugin 'mbbill/undotree'
-
+        " dash, exclusively for Mac
+        Plugin 'rizzatti/dash.vim'
+        " pymode
+        Plugin 'klen/python-mode'
 
         " plugin from http://vim-scripts.org/vim/scripts.html
         " Plugin 'L9'
@@ -209,6 +212,9 @@ let g:syntastic_cpp_compiler_options=' -std=c++11 '
         " Put new splited window right/below to the current one
         set splitright
         set splitbelow
+
+        " Disable doc window in pymode
+        set completeopt=menu
 " }
 
 " Formatting {
