@@ -33,7 +33,8 @@
         " open buffer and execute shell
         Plugin 'vim-scripts/Conque-Shell'
         " status/tabline
-        Plugin 'bling/vim-airline'
+        Plugin 'vim-airline/vim-airline'
+        Plugin 'vim-airline/vim-airline-themes'
         " git indicator
         Plugin 'airblade/vim-gitgutter'
         " various color schemes
