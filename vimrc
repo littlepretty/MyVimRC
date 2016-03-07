@@ -59,6 +59,8 @@
         Plugin 'rizzatti/dash.vim'
         " pymode
         Plugin 'klen/python-mode'
+        " auto code completion
+        "Plugin 'Valloric/YouCompleteMe'
 
         " plugin from http://vim-scripts.org/vim/scripts.html
         " Plugin 'L9'
