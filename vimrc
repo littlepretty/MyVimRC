@@ -161,28 +161,28 @@ let g:syntastic_cpp_compiler_options=' -std=c++11 '
                 set showcmd
         endif
 
-        if has('statusline')
-                set laststatus=2
-                set statusline=%<%f\
-                set statusline+=%w%h%m%r
+        "if has('statusline')
+                "set laststatus=2
+                "set statusline=%<%f\
+                "set statusline+=%w%h%m%r
         
-                " Git Hotness
-                set statusline+=%{fugitive#statusline()}
+                "" Git Hotness
+                "set statusline+=%{fugitive#statusline()}
                 
-                " Filetype
-                set statusline+=\ [%{&ff}/%Y]
+                "" Filetype
+                "set statusline+=\ [%{&ff}/%Y]
                 
-                " Current dir
-                set statusline+=\ [%{getcwd()}]
+                "" Current dir
+                "set statusline+=\ [%{getcwd()}]
                 
-                " Right aligned file nav info
-                "set statusline+=%=%-14.(%l,%c%V)\ %p%%
+                "" Right aligned file nav info
+                ""set statusline+=%=%-14.(%l,%c%V)\ %p%%
                 
-                " recommended settings for syntastic
-                set statusline+=%#warningmsg#
-                set statusline+=%{SyntasticStatuslineFlag()}
-                set statusline+=%*
-        endif
+                "" recommended settings for syntastic
+                "set statusline+=%#warningmsg#
+                "set statusline+=%{SyntasticStatuslineFlag()}
+                "set statusline+=%*
+        "endif
         
         " for MacBookPro: backspace
         " won't delete over line breaks, 
