@@ -52,9 +52,8 @@ ZSH_THEME="robbyrussell"
 plugins=(git tmux vundle ruby pep8 mosh git-extras git-flow gitignore gnu-utils ubuntu vagrant pip)
 
 # User configuration
-
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/yjq/Desktop/Eclipse"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/yjq/Desktop/Eclipse"
+export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
