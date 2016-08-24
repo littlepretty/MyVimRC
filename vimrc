@@ -126,6 +126,10 @@ let g:syntastic_cpp_compiler_options=' -std=c++11 '
         autocmd BufRead,BufNewFile *.txt setlocal spell
         " Word completion with ctrl-N or ctrl-P
         set complete+=kspell
+        
+        autocmd BufRead,BufNewFile *.md set colorcolumn=82
+        autocmd BufRead,BufNewFile *.txt set colorcolumn=82
+        autocmd BufRead,BufNewFile *.tex set colorcolumn=88
 
         " Save tons of history
         set history=1000
