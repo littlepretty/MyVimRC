@@ -3,14 +3,16 @@
 echo "Existing .tmux.conf, .vimrc and .zshrc will be overwritten!!!"
 read -p "Do you want to continue? (Y/N)" confirm
 
+PWD=`pwd`
 if [ "${confirm}" == "Y" ]
 then
-        echo "ln -s tmux.conf ~/.tmux.conf"
-        ln -s tmux.conf ~/.tmux.conf
-        echo "ln -s vimrc ~/.vimrc"
-        ln -s vimrc ~/.vimrc
-        echo "ln -s zshrc ~/.zshrc"
-        ln -s zshrc ~/.zshrc
+	rm ~/.tmux.conf ~/.vimrc ~/.zshrc
+        echo "ln -s $PWD/tmux.conf ~/.tmux.conf"
+        ln -s $PWD/tmux.conf ~/.tmux.conf
+        echo "ln -s $PWD/vimrc ~/.vimrc"
+        ln -s $PWD/vimrc ~/.vimrc
+        echo "ln -s $PWD/zshrc ~/.zshrc"
+        ln -s $PWD/zshrc ~/.zshrc
 else
         echo "See you next time"
 fi
