@@ -100,10 +100,15 @@
 let g:syntastic_always_populate_loc_list=0
 let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=1 
-
+let g:syntastic_check_on_wq=1
+" disable syntastic for python files
+let g:syntastic_mode_map = {'passive_filetypes': ['python']}
 " let syntastic use c++11 std
 let g:syntastic_cpp_compiler_options=' -std=c++11 '
+
+" boost up pymode by disable rope
+let g:pymode_rope=0
+
 
 " General {
         " For MacBookPro: syntax is not on
@@ -127,6 +132,9 @@ let g:syntastic_cpp_compiler_options=' -std=c++11 '
         " Word completion with ctrl-N or ctrl-P
         set complete+=kspell
         
+        " Use 4 spaces tab for tex files
+        autocmd Filetype tex setlocal ts=4 sw=4 sts=0 expandtab
+        autocmd Filetype bib setlocal ts=4 sw=4 sts=0 expandtab
         autocmd BufRead,BufNewFile *.md set colorcolumn=82
         autocmd BufRead,BufNewFile *.txt set colorcolumn=82
         autocmd BufRead,BufNewFile *.tex set colorcolumn=88
