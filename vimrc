@@ -143,7 +143,9 @@ let g:pymode_rope=0
         set history=1000
         " Tell vim to remember certain things when exit
         set viminfo='10,\"100,:50,%,n~/.viminfo
-
+        " Don't clear screen after exit
+        set t_te=
+        
         " Resume to the last editing position
         if has("autocmd")
                 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
