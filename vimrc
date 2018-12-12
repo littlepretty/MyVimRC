@@ -145,7 +145,7 @@ let g:pymode_python='python3.7'
         set history=1000
         " Tell vim to remember certain things when exit
         set viminfo='10,\"100,:50,%,n~/.viminfo
-
+        
         " Resume to the last editing position
         if has("autocmd")
                 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
