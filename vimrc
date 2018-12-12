@@ -108,7 +108,7 @@ let g:syntastic_cpp_compiler_options=' -std=c++11 '
 
 " boost up pymode by disable rope
 let g:pymode_rope=0
-
+let g:pymode_python='python3.7'
 
 " General {
         " For MacBookPro: syntax is not on
@@ -135,6 +135,8 @@ let g:pymode_rope=0
         " Use 4 spaces tab for tex files
         autocmd Filetype tex setlocal ts=4 sw=4 sts=0 expandtab
         autocmd Filetype bib setlocal ts=4 sw=4 sts=0 expandtab
+        autocmd Filetype c setlocal ts=8 sw=8 sts=0 expandtab
+        autocmd Filetype cpp setlocal ts=4 sw=4 sts=0 expandtab
         autocmd BufRead,BufNewFile *.md set colorcolumn=82
         autocmd BufRead,BufNewFile *.txt set colorcolumn=82
         autocmd BufRead,BufNewFile *.tex set colorcolumn=88
@@ -239,10 +241,10 @@ let g:pymode_rope=0
         " Set tab width for C
         " Turn on filetype
         filetype plugin on
-        set tabstop=8
+        set tabstop=4
         set expandtab
-        set shiftwidth=8
-        set softtabstop=8
+        set shiftwidth=4
+        set softtabstop=4
         set autoindent
         set smartindent
         set cindent
