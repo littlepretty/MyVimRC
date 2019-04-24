@@ -8,6 +8,8 @@
 
         " set the runtime path to include Vundle and initialize
         set rtp+=~/.vim/bundle/Vundle.vim
+        set rtp+=~/.fzf
+
         call vundle#begin()
         " alternatively, pass a path where Vundle should install plugins
         "call vundle#begin('~/some/path/here')
@@ -26,6 +28,7 @@
         Plugin 'scrooloose/nerdtree'
         " comment multiple lines
         Plugin 'scrooloose/nerdcommenter'
+        Plugin 'Xuyuanp/nerdtree-git-plugin'
         " syntax checker
         Plugin 'scrooloose/syntastic'
         Plugin 'easymotion/vim-easymotion'
@@ -97,6 +100,8 @@
         " Bundle "pythoncomplete"
 " }
 
+let g:NERDTreeQuitOnOpen=0
+let g:NERDTreeWinPos='right'
 let g:syntastic_always_populate_loc_list=0
 let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_open=1
@@ -108,7 +113,7 @@ let g:syntastic_cpp_compiler_options=' -std=c++11 '
 
 " boost up pymode by disable rope
 let g:pymode_rope=0
-
+let g:pymode_python='python3'
 
 " General {
         " For MacBookPro: syntax is not on
@@ -165,7 +170,7 @@ let g:pymode_rope=0
 " Vim UI {
         set showmode
         set cursorline
-        colorscheme Tomorrow-Night-Blue
+        colorscheme xemacs
         highlight clear SignColumn
         highlight clear LineNr
 
@@ -239,14 +244,14 @@ let g:pymode_rope=0
         " Set tab width for C
         " Turn on filetype
         filetype plugin on
-        set tabstop=8
+        set tabstop=4
         set expandtab
-        set shiftwidth=8
-        set softtabstop=8
+        set shiftwidth=4
+        set softtabstop=4
         set autoindent
         set smartindent
         set cindent
-        
+        autocmd FileType c setlocal ts=8 sw=8 sts=8 expandtab
 " }
 
 " Key Mappings {
