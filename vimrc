@@ -70,6 +70,9 @@
 
         " Git plugin not hosted on GitHub
         Plugin 'git://git.wincent.com/command-t.git'
+        
+        " Rust lang
+        Plugin 'rust-lang/rust.vim'
 
         " git repos on your local machine (i.e. when working on your own plugin)
         " Plugin 'file:///home/gmarik/path/to/plugin'
@@ -107,9 +110,12 @@ let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=1
 " disable syntastic for python files
-let g:syntastic_mode_map = {'passive_filetypes': ['python']}
+let g:syntastic_mode_map={'passive_filetypes': ['python']}
 " let syntastic use c++11 std
 let g:syntastic_cpp_compiler_options=' -std=c++11 '
+
+" Gitgutter line threshold
+let g:gitgutter_max_signs=5000
 
 " boost up pymode by disable rope
 let g:pymode_rope=0
