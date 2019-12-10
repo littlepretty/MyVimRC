@@ -52,6 +52,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
     git tmux vundle pep8 git-extras git-flow gitignore gnu-utils
     ubuntu pip python cp colored-man-pages man zsh-syntax-highlighting
+    cargo rust
 )
 
 # User configuration
