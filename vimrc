@@ -142,9 +142,10 @@ let g:pymode_python='python3.7'
         autocmd Filetype bib setlocal ts=4 sw=4 sts=0 expandtab
         autocmd Filetype c setlocal ts=8 sw=8 sts=0 expandtab
         autocmd Filetype cpp setlocal ts=4 sw=4 sts=0 expandtab
-        autocmd BufRead,BufNewFile *.md set colorcolumn=82
-        autocmd BufRead,BufNewFile *.txt set colorcolumn=82
-        autocmd BufRead,BufNewFile *.tex set colorcolumn=88
+        autocmd BufRead,BufNewFile *.cpp set colorcolumn=81
+        autocmd BufRead,BufNewFile *.md set colorcolumn=81
+        autocmd BufRead,BufNewFile *.txt set colorcolumn=81
+        autocmd BufRead,BufNewFile *.tex set colorcolumn=81
 
         " Save tons of history
         set history=1000
